@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SitoVIN - Izrada dizajna | Profesionalna štampa tekstila. Prilagođavanje loga, novi dizajn, vektorske ilustracije.">
+<meta name="keywords" content="izrada dizajna, prilagođavanje loga, vektorske ilustracije, grafički dizajn, profesionalna štampa">
+<meta name="author" content="SitoVIN">
+<title>SitoVIN | Izrada dizajna - Profesionalna štampa tekstila</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6}
+header{background:#000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(255,204,0,0.2)}
+.logo{font-size:28px;font-weight:800;color:#fff}
+.logo span{color:#ffcc00}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s}
+nav a:hover{color:#ffcc00}
+.dropdown{position:relative}
+.dropdown-btn{color:#fff;background:none;border:none;cursor:pointer;font-weight:500;transition:0.3s;display:flex;align-items:center;gap:5px}
+.dropdown-btn:hover{color:#ffcc00}
+.dropdown-content{display:none;position:absolute;background:#1c1c1c;min-width:250px;box-shadow:0 8px 16px rgba(0,0,0,0.5);padding:10px 0;border-radius:8px;top:100%;left:0;border:1px solid #ffcc00}
+.dropdown-content a{color:#fff;padding:12px 20px;text-decoration:none;display:block;transition:0.3s}
+.dropdown-content a:hover{background:#2a2a2a;color:#ffcc00;padding-left:25px}
+.dropdown:hover .dropdown-content{display:block}
+section{padding:60px 40px;max-width:1200px;margin:auto}
+section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#ffcc00}
+section h3{color:#ffcc00;margin-bottom:30px;font-size:28px;border-bottom:2px solid #ffcc00;padding-bottom:15px;margin-top:60px}
+.product-category{margin-bottom:80px}
+.subcategory{background:#1c1c1c;padding:30px;border-radius:15px;margin-bottom:25px;border-left:4px solid #ffcc00}
+.subcategory h4{color:#ffcc00;font-size:20px;margin-bottom:15px}
+.subcategory-desc{margin:15px 0;color:#ccc;line-height:1.8;font-size:15px}
+.subcategory-features{list-style:none;margin-left:20px;margin-top:15px;margin-bottom:20px}
+.subcategory-features li{margin:10px 0;padding-left:25px;position:relative;color:#ddd;font-size:14px}
+.subcategory-features li:before{content:"✓";position:absolute;left:0;color:#ffcc00;font-weight:bold}
+.why-us-box{background:#1c1c1c;padding:25px;border-radius:15px;border-left:4px solid #ffcc00;margin-bottom:20px}
+.why-us-box h4{color:#ffcc00;margin-bottom:15px}
+.why-us-box p{color:#ccc;line-height:1.8;margin:10px 0}
+.section-form{background:#1c1c1c;padding:40px;border-radius:15px;max-width:700px;margin:40px auto;border-left:4px solid #ffcc00}
+.section-form h4{color:#ffcc00;margin-bottom:20px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:8px;font-weight:600;color:#ffcc00}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px;background:#0f0f0f;color:#fff;border:1px solid #ffcc00;border-radius:8px;font-family:'Poppins',sans-serif}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#fff;box-shadow:0 0 10px rgba(255,204,0,0.3)}
+.form-btn{width:100%;padding:14px;font-size:16px;background:#ffcc00;color:#000}
+.form-btn:hover{background:#fff}
+.file-input-wrapper{position:relative;overflow:hidden;display:inline-block;width:100%}
+.file-input-wrapper input[type=file]{position:absolute;left:-9999px}
+.file-input-label{display:block;padding:12px;background:#0f0f0f;color:#ffcc00;border:2px dashed #ffcc00;border-radius:8px;text-align:center;cursor:pointer;transition:0.3s;font-weight:600}
+.file-input-label:hover{background:#1c1c1c;border-color:#fff;color:#fff}
+.file-name{display:block;margin-top:8px;color:#ccc;font-size:12px}
+.form-message{text-align:center;margin-top:15px;padding:15px;border-radius:8px;display:none;font-weight:600}
+.form-message.success{background:#2ecc71;display:block}
+footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:50px;border-top:1px solid #ffcc00}
+@media(max-width:768px){
+header{flex-direction:column}
+nav{margin-top:10px;flex-direction:column;gap:15px}
+section{padding:40px 20px}
+.section-form{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Sito<span>VIN</span></div>
+<nav>
+<a href="index.html">O nama</a>
+<div class="dropdown">
+<button class="dropdown-btn">Usluge ▼</button>
+<div class="dropdown-content">
+<a href="radna-odela.html">Radna odela</a>
+<a href="majice.html">Majice</a>
+<a href="duksevi.html">Duksevi i trenerke</a>
+<a href="dresovi.html">Dresovi za timove</a>
+<a href="kacketi.html">Kačketi</a>
+<a href="dizajn.html"><strong>Izrada dizajna</strong></a>
+</div>
+</div>
+<a href="istorija.html">Istorija</a>
+<a href="index.html#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<section>
+<h2>🎨 Izrada dizajna</h2>
+<p style="text-align:center;margin-bottom:30px;color:#ccc">Kreiramo unikatna grafička rešenja prilagođena vašem brandu</p>
+
+<div class="why-us-box">
+<h4>Zašto baš dizajn od SitoVIN?</h4>
+<p>✓ <strong>Profesionalni tim</strong> - iskusan grafički dizajn</p>
+<p>✓ <strong>Besplatna konsultacija</strong> - detaljno razumevanje potreba</p>
+<p>✓ <strong>Unlimited revizije</strong> - dok ne budete zadovoljni</p>
+<p>✓ <strong>Brz turn-around</strong> - rezultati u kratkom roku</p>
+</div>
+
+<!-- PRILAGOĐAVANJE LOGA -->
+<div class="product-category">
+<h3>Prilagođavanje postojećeg loga</h3>
+<div class="subcategory">
+<h4>Prilagođavanje postojećeg loga</h4>
+<p class="subcategory-desc">Adaptiramo vaš postojeći logo za štampu na tekstilima. Osiguramo jasnu vidljivost na svim veličinama.</p>
+<ul class="subcategory-features">
+<li>Analiza i prilagođavanje logotipa</li>
+<li>Vektorisanje ako je potrebno</li>
+<li>Testiranje na različitim veličinama</li>
+<li>Preporuke za boje i materijale</li>
+</ul>
+</div>
+</div>
+
+<!-- NOVI DIZAJN -->
+<div class="product-category">
+<h3>Izrada novog dizajna od nule</h3>
+<div class="subcategory">
+<h4>Izrada novog dizajna od nule</h4>
+<p class="subcategory-desc">Kreiramo potpuno novi dizajn prema vašoj viziji. Proces od koncepta do finalnog proizvoda.</p>
+<ul class="subcategory-features">
+<li>Detaljnu konsultaciju sa vašim timom</li>
+<li>Više varijacija za odabir</li>
+<li>Unlimited revizije</li>
+<li>Finaluzacija za štampu</li>
+</ul>
+</div>
+</div>
+
+<!-- VEKTORSKE ILUSTRACIJE -->
+<div class="product-category">
+<h3>Vektorske ilustracije i grafike</h3>
+<div class="subcategory">
+<h4>Vektorske ilustracije i grafike</h4>
+<p class="subcategory-desc">Profesionalne vektorske ilustracije koje pružaju čist izgled na svim veličinama.</p>
+<ul class="subcategory-features">
+<li>Originalne ilustracije</li>
+<li>Beskonačna skalabilnost</li>
+<li>Razni stilovi dostupni</li>
+<li>Source files ostaju u vašem vlasništvu</li>
+</ul>
+</div>
+</div>
+
+<!-- FORMA -->
+<div class="section-form">
+<h4>📋 Upit za dizajn</h4>
+<form class="category-form" data-service="Dizajn">
+<div class="form-group"><label>Vaše ime i prezime *</label><input type="text" class="form-name" required placeholder="Petar Marković"></div>
+<div class="form-group"><label>Email *</label><input type="email" class="form-email" required placeholder="vas@email.com"></div>
+<div class="form-group"><label>Telefon</label><input type="tel" class="form-phone" placeholder="+381 64 123 4567"></div>
+<div class="form-group"><label>Naziv brenda</label><input type="text" class="form-company" placeholder="Naziv vašeg brenda"></div>
+<div class="form-group"><label>Tip dizajna *</label><select class="form-subservice" required><option value="">-- Izaberite --</option><option value="Prilagođavanje loga">Prilagođavanje loga</option><option value="Novi dizajn">Novi dizajn od nule</option><option value="Ilustracije">Vektorske ilustracije</option></select></div>
+<div class="form-group"><label>Detaljni opis *</label><textarea class="form-message" required placeholder="Opišite vašu viziju..."></textarea></div>
+<div class="form-group"><label>📎 Pošalji referentni materijal</label><div class="file-input-wrapper"><input type="file" class="form-file" accept=".pdf,.png,.jpg,.jpeg,.ai,.psd,.eps,.svg"><label class="file-input-label">Kliknite ili prevucite fajl<span class="file-name" style="display:none;"></span></label></div><small style="color:#999;display:block;margin-top:8px;">Maksimalno 10MB</small></div>
+<button type="submit" class="btn form-btn">Pošalji upit</button>
+<div class="form-message"></div>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SitoVIN | Sva prava zadržana</p>
+<p style="margin-top:10px;">Telefon: <a href="tel:+381642993682" style="color:#ffcc00;text-decoration:none;">064 2993682</a> | Email: <a href="mailto:sitovin@mts.rs" style="color:#ffcc00;text-decoration:none;">sitovin@mts.rs</a></p>
+</footer>
+
+<script>
+const fileInputs = document.querySelectorAll('.form-file');
+fileInputs.forEach(input => {
+  const label = input.nextElementSibling;
+  const fileName = label.querySelector('.file-name');
+  
+  input.addEventListener('change', function() {
+    if(this.files && this.files[0]) {
+      fileName.textContent = '✓ ' + this.files[0].name;
+      fileName.style.display = 'block';
+    }
+  });
+  
+  label.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    label.style.background = '#2a2a2a';
+    label.style.borderColor = '#fff';
+  });
+  
+  label.addEventListener('dragleave', () => {
+    label.style.background = '#0f0f0f';
+    label.style.borderColor = '#ffcc00';
+  });
+  
+  label.addEventListener('drop', (e) => {
+    e.preventDefault();
+    label.style.background = '#0f0f0f';
+    label.style.borderColor = '#ffcc00';
+    if(e.dataTransfer.files && e.dataTransfer.files[0]) {
+      input.files = e.dataTransfer.files;
+      fileName.textContent = '✓ ' + e.dataTransfer.files[0].name;
+      fileName.style.display = 'block';
+    }
+  });
+});
+
+document.querySelector('.category-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = this.querySelector('.form-name').value;
+  const email = this.querySelector('.form-email').value;
+  const phone = this.querySelector('.form-phone').value;
+  const company = this.querySelector('.form-company').value;
+  const subservice = this.querySelector('.form-subservice').value;
+  const message = this.querySelector('.form-message').value;
+  
+  const mailtoLink = `mailto:sitovin@mts.rs?subject=Novi upit za Dizajn od ${name}&body=
+Ime: ${name}
+Email: ${email}
+Telefon: ${phone}
+Brend: ${company}
+Tip dizajna: ${subservice}
+Poruka: ${message}`;
+  
+  const statusDiv = document.querySelector('.form-message');
+  statusDiv.textContent = '✓ Upit je poslat! Očekujte odgovor na vašoj email adresi.';
+  statusDiv.classList.add('success');
+  statusDiv.style.display = 'block';
+  
+  window.location.href = mailtoLink;
+  this.reset();
+  document.querySelector('.file-name').style.display = 'none';
+  
+  setTimeout(() => {
+    statusDiv.style.display = 'none';
+  }, 5000);
+});
+</script>
+
+</body>
+</html>
