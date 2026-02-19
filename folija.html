@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SitoVIN - Flex folija: glatki, čisti i postojani otisci za personalizaciju dresova, odela i majica.">
+<title>SitoVIN | Flex Folija</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6}
+header{background:#000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(255,204,0,0.2)}
+.logo{font-size:28px;font-weight:800;color:#fff}
+.logo span{color:#ffcc00}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s}
+nav a:hover{color:#ffcc00}
+.dropdown{position:relative}
+.dropdown-btn{color:#fff;background:none;border:none;cursor:pointer;font-family:'Poppins',sans-serif;font-size:16px;font-weight:500;transition:0.3s;display:flex;align-items:center;gap:5px}
+.dropdown-btn:hover{color:#ffcc00}
+.dropdown-content{display:none;position:absolute;background:#1c1c1c;min-width:250px;box-shadow:0 8px 16px rgba(0,0,0,0.5);padding:10px 0;border-radius:8px;top:100%;left:0;border:1px solid #ffcc00}
+.dropdown-content a{color:#fff;padding:12px 20px;text-decoration:none;display:block;transition:0.3s}
+.dropdown-content a:hover{background:#2a2a2a;color:#ffcc00;padding-left:25px}
+.dropdown:hover .dropdown-content{display:block}
+.page-hero{padding:80px 40px 50px;text-align:center;background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.95)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64');background-size:cover;background-position:center}
+.page-hero h1{font-size:42px;font-weight:800;color:#ffcc00;margin-bottom:15px;animation:fadeInDown 0.8s}
+.page-hero p{font-size:18px;color:#ccc;max-width:650px;margin:auto;animation:fadeInUp 0.8s}
+section{padding:60px 40px;max-width:900px;margin:auto}
+section h2{text-align:center;margin-bottom:40px;font-size:36px;color:#ffcc00}
+.content-box{background:#1c1c1c;padding:40px;border-radius:15px;border-left:4px solid #ffcc00;margin-bottom:30px}
+.content-box p{color:#ccc;font-size:16px;line-height:1.9;margin-bottom:15px}
+.advantages{background:#1c1c1c;padding:40px;border-radius:15px;border-left:4px solid #ffcc00;margin-bottom:30px}
+.advantages h3{color:#ffcc00;font-size:20px;margin-bottom:20px}
+.advantages ul{list-style:none;padding:0}
+.advantages ul li{color:#ccc;padding:10px 0;border-bottom:1px solid #2a2a2a;font-size:15px}
+.advantages ul li:last-child{border-bottom:none}
+.advantages ul li::before{content:'✓ ';color:#ffcc00;font-weight:700}
+.contact-info{background:#1c1c1c;padding:40px;border-radius:15px;margin:30px 0;border-left:4px solid #ffcc00}
+.contact-info h3{color:#ffcc00;margin-bottom:20px}
+.contact-info p{margin:15px 0;font-size:16px}
+.contact-info a{color:#ffcc00;text-decoration:none;font-weight:600}
+.contact-info a:hover{text-decoration:underline}
+iframe{width:100%;height:400px;border:0;border-radius:15px;margin-top:30px}
+.back-link{display:inline-block;margin:30px 0 0;color:#ffcc00;text-decoration:none;font-weight:500}
+.back-link:hover{text-decoration:underline}
+footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:50px;border-top:1px solid #ffcc00}
+footer a{color:#ffcc00;text-decoration:none}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+.page-hero h1{font-size:28px}
+header{flex-direction:column}
+nav{margin-top:10px;flex-direction:column;gap:15px}
+section{padding:40px 20px}
+.content-box,.advantages,.contact-info{padding:25px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html" style="text-decoration:none"><div class="logo">Sito<span>VIN</span></div></a>
+<nav>
+<a href="index.html">O nama</a>
+<div class="dropdown">
+<button class="dropdown-btn">Usluge ▼</button>
+<div class="dropdown-content">
+<a href="radna-odela.html">Radna odela</a>
+<a href="majice.html">Majice</a>
+<a href="duksevi.html">Duksevi i trenerke</a>
+<a href="dresovi.html">Dresovi za timove</a>
+<a href="kacketi.html">Kačketi</a>
+<a href="dizajn.html">Izrada dizajna</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropdown-btn">Štampa ▼</button>
+<div class="dropdown-content">
+<a href="sitostampa.html">Sitoštampa</a>
+<a href="dtf.html">DTF štampa</a>
+<a href="folija.html">Flex folija</a>
+</div>
+</div>
+<a href="istorija.html">Istorija</a>
+<a href="index.html#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<div class="page-hero">
+<h1>Flex Folija</h1>
+<p>Glatki, čisti i veoma postojani otisci — idealno za personalizaciju i jasne dizajne</p>
+</div>
+
+<section>
+
+
+<div class="content-box" style="margin-top:30px">
+<p>Flex folija je tehnika štampe na tekstilu kod koje se motiv iseče iz specijalne obojene folije i zatim se pomoću termoprese prenosi na majicu ili drugi tekstil. Ova metoda daje gladak, čist i veoma postojan otisak.</p>
+<p>Idealan je izbor za jednostavne dizajne, natpise, brojeve, imena i logotipe u jednoj ili dve boje. Flex folija pruža intenzivne, pune boje i izuzetnu izdržljivost pri pranju.</p>
+<p>Flex folija je savršeno rešenje za <strong>sportske dresove, radnu odeću, promotivne majice</strong> i personalizovane proizvode.</p>
+</div>
+
+<div class="advantages">
+<h3>🏆 Prednosti flex folije</h3>
+<ul>
+<li>Intenzivne i pune boje</li>
+<li>Izuzetna postojanost</li>
+<li>Precizne ivice i čist izgled</li>
+<li>Idealno za personalizaciju (imena, brojevi, natpisi)</li>
+<li>Pogodno za manje serije i pojedinačne komade</li>
+</ul>
+</div>
+</section>
+
+<section id="kontakt" style="max-width:900px">
+<h2>Kontakt</h2>
+<div class="contact-info">
+<h3>📍 Pronađite nas</h3>
+<p><strong>Adresa:</strong> Brus, Bože Jeličića 2</p>
+<p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#5c2f3528332a35321c31282f722e2f"><span class="__cf_email__" data-cfemail="215248554e57484f614c55520f5352">[email&#160;protected]</span></a></p>
+<p><strong>Telefon:</strong> <a href="tel:+381642993682">064 2993682</a></p>
+<p style="margin-top:30px;"><strong>Lokacija na Google mapama:</strong></p>
+<iframe src="https://www.google.com/maps?q=Brus+Bože+Jeličića+2&output=embed"></iframe>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SitoVIN | Sva prava zadržana</p>
+<p style="margin-top:10px;">Telefon: <a href="t
