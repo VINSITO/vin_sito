@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SitoVIN - Vrste štampe: Sitoštampa, DTF i Flex folija. Profesionalna štampa tekstila od 2006. godine.">
+<title>SitoVIN | Štampa</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6}
+header{background:#000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(255,204,0,0.2)}
+.logo{font-size:28px;font-weight:800;color:#fff}
+.logo span{color:#ffcc00}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s}
+nav a:hover{color:#ffcc00}
+.dropdown{position:relative}
+.dropdown-btn{color:#fff;background:none;border:none;cursor:pointer;font-weight:500;font-family:'Poppins',sans-serif;font-size:16px;transition:0.3s;display:flex;align-items:center;gap:5px}
+.dropdown-btn:hover{color:#ffcc00}
+.dropdown-content{display:none;position:absolute;background:#1c1c1c;min-width:250px;box-shadow:0 8px 16px rgba(0,0,0,0.5);padding:10px 0;border-radius:8px;top:100%;left:0;border:1px solid #ffcc00}
+.dropdown-content a{color:#fff;padding:12px 20px;text-decoration:none;display:block;transition:0.3s}
+.dropdown-content a:hover{background:#2a2a2a;color:#ffcc00;padding-left:25px}
+.dropdown:hover .dropdown-content{display:block}
+.page-hero{padding:80px 40px 40px;text-align:center;background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.95)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64');background-size:cover;background-position:center}
+.page-hero h1{font-size:42px;font-weight:800;color:#ffcc00;margin-bottom:15px;animation:fadeInDown 0.8s}
+.page-hero p{font-size:18px;color:#ccc;max-width:650px;margin:auto;animation:fadeInUp 0.8s}
+section{padding:80px 40px;max-width:1200px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:20px}
+.card{background:#1c1c1c;border-radius:15px;padding:35px;border-top:4px solid #ffcc00;transition:transform 0.3s,box-shadow 0.3s;text-decoration:none;color:#fff;display:block}
+.card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(255,204,0,0.15)}
+.card-icon{font-size:42px;margin-bottom:15px}
+.card h3{font-size:22px;font-weight:700;color:#ffcc00;margin-bottom:12px}
+.card p{color:#ccc;font-size:15px;line-height:1.7}
+.card .arrow{display:inline-block;margin-top:20px;color:#ffcc00;font-weight:600;font-size:14px}
+footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:50px;border-top:1px solid #ffcc00}
+footer a{color:#ffcc00;text-decoration:none}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+.page-hero h1{font-size:28px}
+header{flex-direction:column}
+nav{margin-top:10px;flex-direction:column;gap:15px}
+section{padding:40px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Sito<span>VIN</span></div>
+<nav>
+<a href="index.html">O nama</a>
+<div class="dropdown">
+<button class="dropdown-btn">Usluge ▼</button>
+<div class="dropdown-content">
+<a href="radna-odela.html">Radna odela</a>
+<a href="majice.html">Majice</a>
+<a href="duksevi.html">Duksevi i trenerke</a>
+<a href="dresovi.html">Dresovi za timove</a>
+<a href="kacketi.html">Kačketi</a>
+<a href="dizajn.html">Izrada dizajna</a>
+<a href="stampa.html">Štampa</a>
+</div>
+</div>
+<a href="istorija.html">Istorija</a>
+<a href="index.html#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<div class="page-hero">
+<h1>Štampa</h1>
+<p>Nudimo tri profesionalne tehnike štampe na tekstilu — izaberite onu koja odgovara vašim potrebama.</p>
+</div>
+
+<section>
+<div class="cards">
+<a href="sitostampa.html" class="card">
+<div class="card-icon">🖨️</div>
+<h3>Sitoštampa</h3>
+<p>Jedna od najkvalitetnijih i najtrajnijih tehnika štampe. Idealna za veće serije sa do 4 boje — intenzivne boje i izuzetna otpornost na pranje.</p>
+<span class="arrow">Saznaj više →</span>
+</a>
+<a href="dtf.html" class="card">
+<div class="card-icon">🎨</div>
+<h3>DTF štampa</h3>
+<p>Savremena tehnika za složene dizajne sa neograničenim brojem boja. Idealna za manje serije i personalizovane proizvode sa preciznim detaljima.</p>
+<span class="arrow">Saznaj više →</span>
+</a>
+<a href="folija.html" class="card">
+<div class="card-icon">✂️</div>
+<h3>Flex folija</h3>
+<p>Glatki, čisti i veoma postojani otisci od specijalne obojene folije. Savršeno za natpise, brojeve, logotipe i personalizaciju dresova.</p>
+<span class="arrow">Saznaj više →</span>
+</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SitoVIN | Sva prava zadržana</p>
+<p style="margin-top:10px;">Telefon: <a href="tel:+381642993682">064 2993682</a> | Email: <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
+</footer>
+
+</body>
+</html>
