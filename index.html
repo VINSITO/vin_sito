@@ -126,7 +126,25 @@ Svaki projekat tretiramo individualno, prema specifičnim potrebama klijenta.
 <p><strong>Email:</strong> <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
 <p><strong>Telefon:</strong> <a href="tel:+381642993682">064 2993682</a></p>
 <p style="margin-top:30px;"><strong>Lokacija na Google mapama:</strong></p>
-<iframe src="https://www.google.com/maps?q=Brus+Bože+Jeličića+2&output=embed"></iframe>
+<div id="map" style="width:100%; height:400px;"></div>
+  <script>
+function initMap() {
+  const location = { lat: 43.267, lng: 21.895 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: location,
+  });
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    title: "SitoVIN Brus"
+  });
+}
+</script>
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2v-aZU0OSbYHqeZIjGoTlCvv3Awk-IiI&callback=initMap">
+</script>
 </div>
 </section>
 
