@@ -276,4 +276,77 @@ footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:
   });
 
   document.querySelectorAll('nav a').forEach(function (link) {
-    link.addEventListener('click', function ()
+    link.addEventListener('click', function () {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+
+  /* ----- UPLOAD FAJLA ----- */
+  const fileInputs = document.querySelectorAll('.form-file');
+  fileInputs.forEach(input => {
+    const label = input.nextElementSibling;
+    const fileName = label.querySelector('.file-name');
+    input.addEventListener('change', function () {
+      if (this.files && this.files[0]) {
+        fileName.textContent = '✓ ' + this.files[0].name;
+        fileName.style.display = 'block';
+      }
+    });
+    label.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      label.style.background = '#2a2a2a';
+      label.style.borderColor = '#fff';
+    });
+    label.addEventListener('dragleave', () => {
+      label.style.background = '#0f0f0f';
+      label.style.borderColor = '#ffcc00';
+    });
+    label.addEventListener('drop', (e) => {
+      e.preventDefault();
+      label.style.background = '#0f0f0f';
+      label.style.borderColor = '#ffcc00';
+      if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+        input.files = e.dataTransfer.files;
+        fileName.textContent = '✓ ' + e.dataTransfer.files[0].name;
+        fileName.style.display = 'block';
+      }
+    });
+  });
+
+  /* ----- SLANJE UPITA ----- */
+  document.querySelector('.category-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = this.querySelector('.form-name').value;
+    const email = this.querySelector('.form-email').value;
+    const phone = this.querySelector('.form-phone').value;
+    const company = this.querySelector('.form-company').value;
+    const subservice = this.querySelector('.form-subservice').value;
+    const message = this.querySelector('.form-text').value;
+
+    const subject = encodeURIComponent('Novi upit za Dizajn od ' + name);
+    const body = encodeURIComponent(
+      'Ime: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Telefon: ' + phone + '\n' +
+      'Brend: ' + company + '\n' +
+      'Tip dizajna: ' + subservice + '\n' +
+      'Poruka: ' + message
+    );
+
+    const statusDiv = this.querySelector('.form-status');
+    statusDiv.textContent = '✓ Otvara se vaš email program. Pošaljite poruku da bi upit stigao do nas.';
+    statusDiv.classList.add('success');
+
+    window.location.href = 'mailto:sitovin@mts.rs?subject=' + subject + '&body=' + body;
+
+    this.reset();
+    const fn = this.querySelector('.file-name');
+    if (fn) fn.style.display = 'none';
+    setTimeout(() => { statusDiv.classList.remove('success'); }, 8000);
+  });
+</script>
+
+</body>
+</html>
