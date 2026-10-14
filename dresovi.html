@@ -56,4 +56,324 @@ nav a.active{color:#ffcc00}
 section{padding:60px 40px;max-width:1200px;margin:auto}
 section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#ffcc00}
 section h3{color:#ffcc00;margin-bottom:30px;font-size:28px;border-bottom:2px solid #ffcc00;padding-bottom:15px;margin-top:60px}
-.product-category{mar
+.product-category{margin-bottom:80px}
+.subcategory{background:#1c1c1c;padding:30px;border-radius:15px;margin-bottom:25px;border-left:4px solid #ffcc00}
+.subcategory h4{color:#ffcc00;font-size:20px;margin-bottom:15px}
+.subcategory-desc{margin:15px 0;color:#ccc;line-height:1.8;font-size:15px}
+.subcategory-features{list-style:none;margin-left:20px;margin-top:15px;margin-bottom:20px}
+.subcategory-features li{margin:10px 0;padding-left:25px;position:relative;color:#ddd;font-size:14px}
+.subcategory-features li:before{content:"✓";position:absolute;left:0;color:#ffcc00;font-weight:bold}
+.print-methods{background:#0f0f0f;padding:20px;border-radius:10px;margin:20px 0;border:1px solid #ffcc00}
+.print-methods h5{color:#ffcc00;margin-bottom:15px;font-size:16px}
+.print-method{margin-bottom:15px;padding:15px;background:#1c1c1c;border-radius:8px}
+.print-method strong{color:#ffcc00}
+.print-method p{margin:5px 0;color:#ddd;font-size:13px}
+.price-badge{display:inline-block;background:#2ecc71;color:#000;padding:5px 12px;border-radius:20px;font-weight:600;font-size:12px;margin-top:10px}
+.price-badge.standard{background:#ffcc00}
+.why-us-box{background:#1c1c1c;padding:25px;border-radius:15px;border-left:4px solid #ffcc00;margin-bottom:20px}
+.why-us-box h4{color:#ffcc00;margin-bottom:15px}
+.why-us-box p{color:#ccc;line-height:1.8;margin:10px 0}
+
+/* ---------- FORMA ---------- */
+.section-form{background:#1c1c1c;padding:40px;border-radius:15px;max-width:700px;margin:40px auto;border-left:4px solid #ffcc00}
+.section-form h4{color:#ffcc00;margin-bottom:20px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:8px;font-weight:600;color:#ffcc00}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px;background:#0f0f0f;color:#fff;border:1px solid #ffcc00;border-radius:8px;font-family:'Poppins',sans-serif;font-size:16px}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#fff;box-shadow:0 0 10px rgba(255,204,0,0.3)}
+.form-btn{width:100%;padding:14px;font-size:16px;background:#ffcc00;color:#000}
+.form-btn:hover{background:#fff}
+.file-input-wrapper{position:relative;overflow:hidden;display:inline-block;width:100%}
+.file-input-wrapper input[type=file]{position:absolute;left:-9999px}
+.form-group .file-input-label{display:block;padding:12px;background:#0f0f0f;color:#ffcc00;border:2px dashed #ffcc00;border-radius:8px;text-align:center;cursor:pointer;transition:0.3s;font-weight:600;margin-bottom:0}
+.form-group .file-input-label:hover{background:#1c1c1c;border-color:#fff;color:#fff}
+.file-name{display:block;margin-top:8px;color:#ccc;font-size:12px;font-weight:400}
+.form-status{text-align:center;margin-top:15px;padding:15px;border-radius:8px;display:none;font-weight:600}
+.form-status.success{background:#2ecc71;color:#000;display:block}
+
+footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:50px;border-top:1px solid #ffcc00}
+
+/* ---------- TELEFON / TABLET ---------- */
+@media (max-width:900px){
+  header{padding:12px 20px;flex-wrap:wrap}
+  .logo{font-size:24px}
+  .menu-toggle{display:block}
+
+  nav{
+    display:none;
+    width:100%;
+    flex:none;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:0;
+    margin-top:10px;
+    border-top:1px solid #333;
+  }
+  nav.open{display:flex}
+
+  nav > a,
+  .dropdown-btn{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    padding:14px 0;
+  }
+
+  .dropdown{width:100%}
+  .dropdown-content{
+    position:static;
+    min-width:0;
+    width:100%;
+    box-shadow:none;
+    border:none;
+    border-radius:0;
+    background:#111;
+    padding:0;
+  }
+  .dropdown-content a{text-align:center;padding:12px 20px;white-space:normal}
+  .dropdown-content a:hover{padding-left:20px}
+
+  section{padding:40px 20px}
+  section h2{font-size:28px;margin-bottom:30px}
+  section h3{font-size:22px;margin-top:40px}
+  .product-category{margin-bottom:40px}
+  .subcategory{padding:20px}
+  .print-methods{padding:15px}
+  .section-form{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" style="text-decoration:none"><div class="logo">Sito<span>VIN</span></div></a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Otvori meni" aria-expanded="false">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">O nama</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Tekstil ▼</button>
+      <div class="dropdown-content">
+        <a href="radna-odela.html">Radna odela</a>
+        <a href="majice.html">Majice</a>
+        <a href="duksevi.html">Duksevi i trenerke</a>
+        <a href="dresovi.html" class="active">Dresovi za timove</a>
+        <a href="kacketi.html">Kačketi</a>
+        <a href="dizajn.html">Izrada dizajna</a>
+      </div>
+    </div>
+
+    <a href="istorija.html">Istorija</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Štampa ▼</button>
+      <div class="dropdown-content">
+        <a href="sitostampa.html">Sitoštampa</a>
+        <a href="dtf.html">DTF štampa</a>
+        <a href="folija.html">Flex folija</a>
+      </div>
+    </div>
+
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<section>
+  <h2>⚽ Dresovi za timove</h2>
+  <p style="text-align:center;margin-bottom:30px;color:#ccc">Specijalizovani dresovi za sve vrste sportova</p>
+
+  <div class="why-us-box">
+    <h4>Zašto baš dresovi od SitoVIN?</h4>
+    <p>✓ <strong>Specijalizovana štampa</strong> - imena i brojevi sa preciznom štampom</p>
+    <p>✓ <strong>Brza proizvodnja</strong> - i do 20 igrača u kratkom roku</p>
+    <p>✓ <strong>Svi sportovi</strong> - fudbal, košarka, odbojka</p>
+    <p>✓ <strong>Timski identitet</strong> - jedinstveni izgled</p>
+  </div>
+
+  <div class="product-category">
+    <h3>Fudbalski dresovi</h3>
+    <div class="subcategory">
+      <h4>Fudbalski dresovi</h4>
+      <p class="subcategory-desc">Profesionalni fudbalski dresovi sa štampom imena, broja i logotipa kluba.</p>
+      <ul class="subcategory-features">
+        <li>Polidesterni materijal</li>
+        <li>Imena i brojevi na leđima</li>
+        <li>Logo kluba na prsima</li>
+        <li>Sve veličine dostupne</li>
+      </ul>
+      <div class="print-methods">
+        <h5>Vrste štampe dostupne:</h5>
+        <div class="print-method"><strong>🟡 Sito-štampa</strong> <span class="price-badge standard">Preporučeno</span><p>Za imena i brojeve - SAVRŠENO!</p></div>
+        <div class="print-method"><strong>📄 Preslikač</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-category">
+    <h3>Košarkaški dresovi</h3>
+    <div class="subcategory">
+      <h4>Košarkaški dresovi</h4>
+      <p class="subcategory-desc">Bez rukava basketbalski dresovi sa ergonomskim dizajnom za maksimalnu mobilnost.</p>
+      <ul class="subcategory-features">
+        <li>Bez rukava dizajn</li>
+        <li>Mesh tkanina za ventilaciju</li>
+        <li>Štampa imena, broja i logotipa</li>
+      </ul>
+      <div class="print-methods">
+        <h5>Vrste štampe dostupne:</h5>
+        <div class="print-method"><strong>🟡 Sito-štampa</strong> <span class="price-badge standard">Preporučeno</span></div>
+        <div class="print-method"><strong>📄 Preslikač</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-category">
+    <h3>Odbojkaški dresovi</h3>
+    <div class="subcategory">
+      <h4>Odbojkaški dresovi</h4>
+      <p class="subcategory-desc">Odbojkaški dresovi sa kratkim rukavom. Elastična tkanina za idealan pokret.</p>
+      <ul class="subcategory-features">
+        <li>Elastična tkanina</li>
+        <li>Kratki rukav</li>
+        <li>Imena i brojevi dostupni</li>
+      </ul>
+      <div class="print-methods">
+        <h5>Vrste štampe dostupne:</h5>
+        <div class="print-method"><strong>🟡 Sito-štampa</strong> <span class="price-badge standard">Preporučeno</span></div>
+        <div class="print-method"><strong>📄 Preslikač</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-form">
+    <h4>📋 Upit za dresove za timove</h4>
+    <form class="category-form" data-service="Dresovi za timove">
+      <div class="form-group"><label>Vaše ime i prezime *</label><input type="text" class="form-name" required placeholder="Petar Marković"></div>
+      <div class="form-group"><label>Email *</label><input type="email" class="form-email" required placeholder="vas@email.com"></div>
+      <div class="form-group"><label>Telefon</label><input type="tel" class="form-phone" placeholder="+381 64 123 4567"></div>
+      <div class="form-group"><label>Naziv kluba</label><input type="text" class="form-company" placeholder="Naziv vašeg kluba"></div>
+      <div class="form-group"><label>Tip sporta *</label><select class="form-subservice" required><option value="">-- Izaberite --</option><option value="Fudbal">Fudbalski dresovi</option><option value="Košarka">Košarkaški dresovi</option><option value="Odbojka">Odbojkaški dresovi</option></select></div>
+      <div class="form-group"><label>Tip štampe *</label><select class="form-print-type" required><option value="">-- Izaberite --</option><option value="Sito-štampa (jednobojna)">Sito-štampa jednobojna - Preporučeno</option><option value="Sito-štampa (više boja)">Sito-štampa više boja</option><option value="Preslikač">Preslikač (Transfer)</option></select></div>
+      <div class="form-group"><label>Količina igrača</label><input type="number" class="form-quantity" placeholder="npr. 15"></div>
+      <div class="form-group"><label>Detaljni opis *</label><textarea class="form-text" required placeholder="Imena igrača, brojevi, specijalni zahtevi..."></textarea></div>
+      <div class="form-group"><label>📎 Pošalji fajl sa logotipom</label><div class="file-input-wrapper"><input type="file" id="refFile" class="form-file" accept=".pdf,.png,.jpg,.jpeg,.ai,.psd,.eps,.svg"><label for="refFile" class="file-input-label">Kliknite ili prevucite fajl<span class="file-name" style="display:none;"></span></label></div><small style="color:#999;display:block;margin-top:8px;">Maksimalno 10MB</small></div>
+      <button type="submit" class="btn form-btn">Pošalji upit</button>
+      <div class="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SitoVIN | Sva prava zadržana</p>
+  <p style="margin-top:10px;">Telefon: <a href="tel:+381642993682" style="color:#ffcc00;text-decoration:none;">064 2993682</a> | Email: <a href="mailto:sitovin@mts.rs" style="color:#ffcc00;text-decoration:none;">sitovin@mts.rs</a></p>
+</footer>
+
+<script>
+  /* ----- MENI ----- */
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  menuToggle.addEventListener('click', function () {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  document.querySelectorAll('.dropdown-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const dropdown = btn.parentElement;
+      const wasOpen = dropdown.classList.contains('open');
+      dropdowns.forEach(function (d) { d.classList.remove('open'); });
+      if (!wasOpen) dropdown.classList.add('open');
+    });
+  });
+
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (d) { d.classList.remove('open'); });
+  });
+
+  document.querySelectorAll('nav a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+
+  /* ----- UPLOAD FAJLA ----- */
+  const fileInputs = document.querySelectorAll('.form-file');
+  fileInputs.forEach(input => {
+    const label = input.nextElementSibling;
+    const fileName = label.querySelector('.file-name');
+    input.addEventListener('change', function () {
+      if (this.files && this.files[0]) {
+        fileName.textContent = '✓ ' + this.files[0].name;
+        fileName.style.display = 'block';
+      }
+    });
+    label.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      label.style.background = '#2a2a2a';
+      label.style.borderColor = '#fff';
+    });
+    label.addEventListener('dragleave', () => {
+      label.style.background = '#0f0f0f';
+      label.style.borderColor = '#ffcc00';
+    });
+    label.addEventListener('drop', (e) => {
+      e.preventDefault();
+      label.style.background = '#0f0f0f';
+      label.style.borderColor = '#ffcc00';
+      if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+        input.files = e.dataTransfer.files;
+        fileName.textContent = '✓ ' + e.dataTransfer.files[0].name;
+        fileName.style.display = 'block';
+      }
+    });
+  });
+
+  /* ----- SLANJE UPITA ----- */
+  document.querySelector('.category-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = this.querySelector('.form-name').value;
+    const email = this.querySelector('.form-email').value;
+    const phone = this.querySelector('.form-phone').value;
+    const company = this.querySelector('.form-company').value;
+    const subservice = this.querySelector('.form-subservice').value;
+    const printType = this.querySelector('.form-print-type').value;
+    const quantity = this.querySelector('.form-quantity').value;
+    const message = this.querySelector('.form-text').value;
+
+    const subject = encodeURIComponent('Novi upit za Dresove za timove od ' + name);
+    const body = encodeURIComponent(
+      'Ime: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Telefon: ' + phone + '\n' +
+      'Klub: ' + company + '\n' +
+      'Tip sporta: ' + subservice + '\n' +
+      'Tip štampe: ' + printType + '\n' +
+      'Količina igrača: ' + quantity + '\n' +
+      'Poruka: ' + message
+    );
+
+    const statusDiv = this.querySelector('.form-status');
+    statusDiv.textContent = '✓ Otvara se vaš email program. Pošaljite poruku da bi upit stigao do nas.';
+    statusDiv.classList.add('success');
+
+    window.location.href = 'mailto:sitovin@mts.rs?subject=' + subject + '&body=' + body;
+
+    this.reset();
+    const fn = this.querySelector('.file-name');
+    if (fn) fn.style.display = 'none';
+    setTimeout(() => { statusDiv.classList.remove('success'); }, 8000);
+  });
+</script>
+
+</body>
+</html>
