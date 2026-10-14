@@ -7,29 +7,58 @@
 <meta name="keywords" content="štampa tekstila, majice, radna odela, duksevi, trenerke, dresovi, kačketi, profesionalna štampa, Brus">
 <meta name="author" content="SitoVIN">
 <title>SitoVIN | Profesionalna štampa tekstila - Brus</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6}
-header{background:#000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(255,204,0,0.2)}
-.logo{font-size:28px;font-weight:800;color:#fff}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;font-size:16px}
+
+/* ---------- HEADER / MENI ---------- */
+header{background:#000;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(255,204,0,0.2)}
+.logo{font-size:28px;font-weight:800;color:#fff;white-space:nowrap}
 .logo span{color:#ffcc00}
-nav{display:flex;align-items:center;gap:30px;position:absolute;left:50%;transform:translateX(-50%)}
-nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s}
-nav a:hover{color:#ffcc00}
-.dropdown{position:relative}
-.dropdown-btn{color:#fff;background:none;border:none;cursor:pointer;font-weight:500;transition:0.3s;display:flex;align-items:center;gap:5px}
+
+.menu-toggle{display:none;background:none;border:none;color:#fff;font-size:30px;line-height:1;cursor:pointer;padding:4px 10px;font-family:inherit}
+.menu-toggle:hover{color:#ffcc00}
+
+nav{display:flex;align-items:center;justify-content:center;gap:30px;flex:1}
+
+/* isti font za linkove i dugmad u meniju */
+nav a,
+.dropdown-btn{
+  font-family:'Poppins',sans-serif;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.6;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+nav a:hover,
 .dropdown-btn:hover{color:#ffcc00}
-.dropdown-content{display:none;position:absolute;background:#1c1c1c;min-width:250px;box-shadow:0 8px 16px rgba(0,0,0,0.5);padding:10px 0;border-radius:8px;top:100%;left:0;border:1px solid #ffcc00}
-.dropdown-content a{color:#fff;padding:12px 20px;text-decoration:none;display:block;transition:0.3s}
+
+.dropdown{position:relative}
+.dropdown-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;padding:0}
+
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:250px;background:#1c1c1c;box-shadow:0 8px 16px rgba(0,0,0,0.5);padding:10px 0;border-radius:8px;border:1px solid #ffcc00;z-index:1100}
+.dropdown-content a{display:block;padding:12px 20px;white-space:nowrap}
 .dropdown-content a:hover{background:#2a2a2a;color:#ffcc00;padding-left:25px}
-.dropdown:hover .dropdown-content{display:block}
+
+.dropdown.open .dropdown-content{display:block}
+@media (hover:hover) and (min-width:901px){
+  .dropdown:hover .dropdown-content{display:block}
+}
+
+/* ---------- HERO ---------- */
 .hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85)),url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab');background-size:cover;background-position:center;padding:20px}
 .hero h1{font-size:48px;margin-bottom:20px;animation:fadeInDown 1s}
 .hero p{max-width:650px;margin-bottom:30px;font-size:18px;animation:fadeInUp 1s}
 .btn{background:#ffcc00;color:#000;padding:14px 30px;text-decoration:none;font-weight:600;border-radius:30px;transition:0.3s;display:inline-block;cursor:pointer;border:none}
 .btn:hover{background:#fff;transform:scale(1.05)}
+
+/* ---------- SEKCIJE ---------- */
 section{padding:80px 40px;max-width:1200px;margin:auto}
+section.hero{max-width:none;margin:0}
 section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#ffcc00}
 .about{text-align:center;max-width:800px;margin:auto;line-height:2}
 .about p{margin:15px 0;font-size:16px}
@@ -43,150 +72,137 @@ section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#ffcc00}
 .contact-info a:hover{text-decoration:underline}
 iframe{width:100%;height:400px;border:0;border-radius:15px;margin-top:30px}
 footer{background:#000;text-align:center;padding:30px;font-size:14px;margin-top:50px;border-top:1px solid #ffcc00}
+
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media (max-width: 768px){
-  header {
-    flex-direction: column !important;
-    height: auto !important; /* Umesto 400px */
-    padding: 20px 15px !important;
+
+/* ---------- TELEFON / TABLET ---------- */
+@media (max-width:900px){
+  header{padding:12px 20px;flex-wrap:wrap}
+  .logo{font-size:24px}
+  .menu-toggle{display:block}
+
+  nav{
+    display:none;
+    width:100%;
+    flex:none;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:0;
+    margin-top:10px;
+    border-top:1px solid #333;
   }
-  
-  nav {
-    position: static !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
+  nav.open{display:flex}
+
+  nav > a,
+  .dropdown-btn{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    padding:14px 0;
   }
 
-  .dropdown {
-    width: 100%;
-    text-align: center;
+  .dropdown{width:100%}
+  .dropdown-content{
+    position:static;
+    min-width:0;
+    width:100%;
+    box-shadow:none;
+    border:none;
+    border-radius:0;
+    background:#111;
+    padding:0;
   }
+  .dropdown-content a{text-align:center;padding:12px 20px;white-space:normal}
+  .dropdown-content a:hover{padding-left:20px}
 
-  .dropdown-btn {
-    width: 100%;
-    background: transparent;
-    color: #fff; /* Ili boja koja odgovara */
-    font-size: 16px;
-    border: none;
-    padding: 8px 0;
-  }
-
-  .dropdown-content {
-    position: static !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #111; /* Da se odvoji vizuelno ako treba */
-    width: 100% !important;
-    margin-top: 5px !important;
-  }
+  .hero{height:auto;min-height:80vh}
+  .hero h1{font-size:32px}
+  .hero p{font-size:16px}
+  section{padding:40px 20px}
+  section h2{font-size:28px;margin-bottom:30px}
+  .contact-info{padding:25px}
 }
 </style>
 </head>
 <body>
 
 <header>
-<a href="index.html" style="text-decoration:none"><div class="logo">Sito<span>VIN</span></div></a>
-<nav>
-<a href="index.html">O nama</a>
-<div class="dropdown">
-<button class="dropdown-btn">Tekstil ▼</button>
-<div class="dropdown-content">
-<a href="radna-odela.html">Radna odela</a>
-<a href="majice.html">Majice</a>
-<a href="duksevi.html">Duksevi i trenerke</a>
-<a href="dresovi.html">Dresovi za timove</a>
-<a href="kacketi.html">Kačketi</a>
-<a href="dizajn.html">Izrada dizajna</a>
-</div>
-</div>
-<a href="istorija.html">Istorija</a>
-  <div class="dropdown">
-<button class="dropdown-btn">Štampa ▼</button>
-<div class="dropdown-content">
-<a href="sitostampa.html">Sitoštampa</a>
-<a href="dtf.html">DTF štampa</a>
-<a href="folija.html">Flex folija</a>
-</div>
-</div>
-<a href="index.html#kontakt">Kontakt</a>
-</nav>
+  <a href="index.html" style="text-decoration:none"><div class="logo">Sito<span>VIN</span></div></a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Otvori meni" aria-expanded="false">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">O nama</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Tekstil ▼</button>
+      <div class="dropdown-content">
+        <a href="radna-odela.html">Radna odela</a>
+        <a href="majice.html">Majice</a>
+        <a href="duksevi.html">Duksevi i trenerke</a>
+        <a href="dresovi.html">Dresovi za timove</a>
+        <a href="kacketi.html">Kačketi</a>
+        <a href="dizajn.html">Izrada dizajna</a>
+      </div>
+    </div>
+
+    <a href="istorija.html">Istorija</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Štampa ▼</button>
+      <div class="dropdown-content">
+        <a href="sitostampa.html">Sitoštampa</a>
+        <a href="dtf.html">DTF štampa</a>
+        <a href="folija.html">Flex folija</a>
+      </div>
+    </div>
+
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h1>Profesionalna štampa i izrada dizajna</h1>
-<p>Majice, radna odela, trenerke, duksevi, dresovi za timove i kačketi – vrhunski kvalitet štampe za firme, timove i brendove.</p>
-<p style="font-size:14px;margin-top:15px;opacity:0.9">📍 Poverljivi partneri od 2006. godine</p>
-<a href="#kontakt" class="btn">Pošaljite upit</a>
+  <h1>Profesionalna štampa i izrada dizajna</h1>
+  <p>Majice, radna odela, trenerke, duksevi, dresovi za timove i kačketi – vrhunski kvalitet štampe za firme, timove i brendove.</p>
+  <p style="font-size:14px;margin-top:15px;opacity:0.9">📍 Poverljivi partneri od 2006. godine</p>
+  <a href="#kontakt" class="btn">Pošaljite upit</a>
 </section>
 
 <section id="onama">
-<h2>O nama</h2>
-<div class="about">
-<p>
-<strong>SitoVIN</strong> je porodična firma iz Brusa specijalizovana za profesionalnu štampu i izradu dizajna na tekstilnim proizvodima.
-</p>
-<p>
-Saradjujemo sa kooperantima i vršimo štampu na njihovim proizvodima po najstrožim standardima kvaliteta.
-Naš prioritet su <strong>kvalitet, preciznost i dugotrajnost otiska</strong>.
-</p>
-<p>
-Svaki projekat tretiramo individualno, prema specifičnim potrebama klijenta.
-Štampa je otporna na pranje, habanje i teške uslove rada.
-</p>
-</div>
+  <h2>O nama</h2>
+  <div class="about">
+    <p>
+      <strong>SitoVIN</strong> je porodična firma iz Brusa specijalizovana za profesionalnu štampu i izradu dizajna na tekstilnim proizvodima.
+    </p>
+    <p>
+      Saradjujemo sa kooperantima i vršimo štampu na njihovim proizvodima po najstrožim standardima kvaliteta.
+      Naš prioritet su <strong>kvalitet, preciznost i dugotrajnost otiska</strong>.
+    </p>
+    <p>
+      Svaki projekat tretiramo individualno, prema specifičnim potrebama klijenta.
+      Štampa je otporna na pranje, habanje i teške uslove rada.
+    </p>
+  </div>
 
-<div class="why-us-box">
-<h4>🏆 Zašto izabrati SitoVIN?</h4>
-<p>✓ Iskustvo od <strong>18+ godina</strong> u industriji štampe</p>
-<p>✓ <strong>Premium materijali</strong> i najnovija tehnologija štampe</p>
-<p>✓ <strong>Brz turn-around vreme</strong> - rezultati u najkraćem roku</p>
-<p>✓ <strong>Konkurentne cene</strong> - najbolji odnos cena i kvaliteta</p>
-<p>✓ <strong>Personalizovani pristup</strong> - svaki projekat je unikatan</p>
-<p>✓ <strong>Besplatna konsultacija</strong> - pomoć od početka do kraja</p>
-<p>✓ <strong>Bez minimalne količine</strong> - čak i 1 komad se može štampati!</p>
-</div>
+  <div class="why-us-box">
+    <h4>🏆 Zašto izabrati SitoVIN?</h4>
+    <p>✓ Iskustvo od <strong>18+ godina</strong> u industriji štampe</p>
+    <p>✓ <strong>Premium materijali</strong> i najnovija tehnologija štampe</p>
+    <p>✓ <strong>Brz turn-around vreme</strong> - rezultati u najkraćem roku</p>
+    <p>✓ <strong>Konkurentne cene</strong> - najbolji odnos cena i kvaliteta</p>
+    <p>✓ <strong>Personalizovani pristup</strong> - svaki projekat je unikatan</p>
+    <p>✓ <strong>Besplatna konsultacija</strong> - pomoć od početka do kraja</p>
+    <p>✓ <strong>Bez minimalne količine</strong> - čak i 1 komad se može štampati!</p>
+  </div>
 </section>
 
 <section id="kontakt">
-<h2>Kontakt</h2>
-<div class="contact-info">
-<h3>📍 Pronađite nas</h3>
-<p><strong>Adresa:</strong> Brus, Bože Jeličića 2</p>
-<p><strong>Email:</strong> <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
-<p><strong>Telefon:</strong> <a href="tel:+381642993682">064 2993682</a></p>
-<p style="margin-top:30px;"><strong>Lokacija na Google mapama:</strong></p>
-<div id="map" style="width:100%; height:400px;"></div>
-  <script>
-function initMap() {
-  const location = { lat: 43.267, lng: 21.895 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: location,
-  });
-  const marker = new google.maps.Marker({
-    position: location,
-    map: map,
-    title: "SitoVIN Brus"
-  });
-}
-</script>
-
-<script async
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2v-aZU0OSbYHqeZIjGoTlCvv3Awk-IiI&callback=initMap">
-</script>
-</div>
-</section>
-
-<footer>
-<p>© 2026 SitoVIN | Sva prava zadržana</p>
-<p style="margin-top:10px;">Telefon: <a href="tel:+381642993682" style="color:#ffcc00;text-decoration:none;">064 2993682</a> | Email: <a href="mailto:sitovin@mts.rs" style="color:#ffcc00;text-decoration:none;">sitovin@mts.rs</a></p>
-</footer>
-
-</body>
-</html>
+  <h2>Kontakt</h2>
+  <div class="contact-info">
+    <h3>📍 Pronađite nas</h3>
+    <p><strong>Adresa:</strong> Brus, Bože Jeličića 2</p>
+    <p><strong>Email:</strong> <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
+    <p><strong>Telefon:</strong> <a href="tel:+381642993682">064 2993682</a></p>
+    <p style="margin-top:30px;"><strong>Lokacija na Google
