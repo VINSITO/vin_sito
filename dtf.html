@@ -126,4 +126,114 @@ footer a{color:#ffcc00;text-decoration:none}
 <body>
 
 <header>
-  <a href="index.html" style="text-decoration:none"><div
+  <a href="index.html" style="text-decoration:none"><div class="logo">Sito<span>VIN</span></div></a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Otvori meni" aria-expanded="false">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">O nama</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Tekstil ▼</button>
+      <div class="dropdown-content">
+        <a href="radna-odela.html">Radna odela</a>
+        <a href="majice.html">Majice</a>
+        <a href="duksevi.html">Duksevi i trenerke</a>
+        <a href="dresovi.html">Dresovi za timove</a>
+        <a href="kacketi.html">Kačketi</a>
+        <a href="dizajn.html">Izrada dizajna</a>
+      </div>
+    </div>
+
+    <a href="istorija.html">Istorija</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Štampa ▼</button>
+      <div class="dropdown-content">
+        <a href="sitostampa.html">Sitoštampa</a>
+        <a href="dtf.html" class="active">DTF štampa</a>
+        <a href="folija.html">Flex folija</a>
+      </div>
+    </div>
+
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <h1>DTF Štampa</h1>
+  <p>Savremena tehnika prenosa dizajna na tekstil — neograničen broj boja i izuzetna preciznost</p>
+</div>
+
+<section>
+  <div class="content-box" style="margin-top:30px">
+    <p>DTF (Direct to Film) štampa je savremena tehnika prenosa dizajna na tekstil pomoću specijalne folije. Ova metoda omogućava izradu detaljnih, višebojnih motiva sa velikom preciznošću i odličnom postojanošću.</p>
+    <p>Za razliku od klasičnih tehnika, DTF omogućava štampu složenih dizajna sa prelazima, sitnim detaljima i velikim brojem boja bez ograničenja u pripremi. Nakon štampe na foliji, motiv se termopresom prenosi na tekstil, čime se dobija fleksibilan i izdržljiv otisak.</p>
+    <p>DTF štampa je idealna za <strong>manje serije, personalizovane proizvode</strong> i dizajne sa mnogo boja.</p>
+  </div>
+
+  <div class="advantages">
+    <h3>🏆 Prednosti DTF štampe</h3>
+    <ul>
+      <li>Neograničen broj boja</li>
+      <li>Izuzetno precizni detalji i prelazi</li>
+      <li>Pogodno za male i srednje tiraže</li>
+      <li>Fleksibilan i izdržljiv otisak</li>
+      <li>Mogućnost štampe na različitim vrstama tekstila</li>
+    </ul>
+  </div>
+</section>
+
+<section id="kontakt" style="max-width:900px">
+  <h2>Kontakt</h2>
+  <div class="contact-info">
+    <h3>📍 Pronađite nas</h3>
+    <p><strong>Adresa:</strong> Brus, Bože Jeličića 2</p>
+    <p><strong>Email:</strong> <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
+    <p><strong>Telefon:</strong> <a href="tel:+381642993682">064 2993682</a></p>
+    <p style="margin-top:30px;"><strong>Lokacija na Google mapama:</strong></p>
+    <iframe title="SitoVIN lokacija na mapi" loading="lazy" src="https://www.google.com/maps?q=Brus+Bože+Jeličića+2&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SitoVIN | Sva prava zadržana</p>
+  <p style="margin-top:10px;">Telefon: <a href="tel:+381642993682">064 2993682</a> | Email: <a href="mailto:sitovin@mts.rs">sitovin@mts.rs</a></p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  menuToggle.addEventListener('click', function () {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  document.querySelectorAll('.dropdown-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const dropdown = btn.parentElement;
+      const wasOpen = dropdown.classList.contains('open');
+      dropdowns.forEach(function (d) { d.classList.remove('open'); });
+      if (!wasOpen) dropdown.classList.add('open');
+    });
+  });
+
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (d) { d.classList.remove('open'); });
+  });
+
+  document.querySelectorAll('nav a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>
